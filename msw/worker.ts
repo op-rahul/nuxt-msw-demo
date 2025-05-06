@@ -4,7 +4,7 @@ import { http, HttpResponse } from "msw";
 export default defineNuxtMswWorkerOption(() => {
   const handlers = [
     // Intercept "GET /api/user2" requests...
-    http.get("/api/user2", () => {
+    http.get("/api/user", () => {
       // ...and respond to them using this JSON response.
       return HttpResponse.json({
         message: "Hello Worker!",

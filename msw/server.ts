@@ -9,7 +9,7 @@ export default defineNuxtMswServerOption(() => {
 
   const handlers = [
     // Intercept "GET http://localhost:3000/user" requests...
-    http.get(baseURL + "/api/user2", () => {
+    http.get(baseURL + "/api/user", () => {
       // ...and respond to them using this JSON response.
       return HttpResponse.json({
         message: "Hello msw server!",
